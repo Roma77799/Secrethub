@@ -6,4 +6,3 @@ support = " \nWave, Solara, Zorara and some others besides Scythex"
 titleupdate = "Update 4.7 , 2024/10/26 (ISO8610):"
 textupdate = "--------------------------------------------\nFixed Grab Gun\nFixed Grab Gun keybind\nFixed Droppped Gun esp\nAdded Autofarm\nAdded Speed farm\nFixed GunDrop Notify\n--------------------------------------------\nComing Soon:\nSilent Aim Fix\nFling Fix\nCoin Esp fix\nShaders Fix\nEsp Names Toggle\nAutofarm fix\n--------------------------------------------"
 icon1 = "🎃"
-local getExeName = identifyexecutor or getexecutorname or function() return "Yet Another Roblox Executor v1.2" end
