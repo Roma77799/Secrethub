@@ -15,6 +15,10 @@ def send_message_to_telegram(text):
     }
     requests.post(url, data=payload)
 
+@app.route('/', methods=['GET'])
+def index():
+    return "Server is running"
+
 @app.route('/telegram-webhook', methods=['POST'])
 def telegram_webhook():
     data = request.json
