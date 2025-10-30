@@ -1,64 +1,72 @@
-
 local PlaceID = game.PlaceId
 local AllIDs = {}
 local foundAnything = ""
 local actualHour = os.date("!*t").hour
-local Deleted = false
-local File = pcall(function()
-    AllIDs = game:GetService('HttpService'):JSONDecode(readfile("NotSameServers.json"))
+local HttpService = game:GetService("HttpService")
+
+-- Чтение или создание файла
+local success, result = pcall(function()
+    return HttpService:JSONDecode(readfile("NotSameServers.json"))
 end)
-if not File then
+
+if success and type(result) == "table" then
+    AllIDs = result
+else
     table.insert(AllIDs, actualHour)
-    writefile("NotSameServers.json", game:GetService('HttpService'):JSONEncode(AllIDs))
+    writefile("NotSameServers.json", HttpService:JSONEncode(AllIDs))
 end
+
 function TPReturner()
-    local Site;
+    local Site
     if foundAnything == "" then
-        Site = game.HttpService:JSONDecode(game:HttpGet('https://games.roblox.com/v1/games/' .. PlaceID .. '/servers/Public?sortOrder=Asc&limit=100'))
+        Site = HttpService:JSONDecode(game:HttpGet("https://games.roblox.com/v1/games/" .. PlaceID .. "/servers/Public?sortOrder=Asc&limit=100"))
     else
-        Site = game.HttpService:JSONDecode(game:HttpGet('https://games.roblox.com/v1/games/' .. PlaceID .. '/servers/Public?sortOrder=Asc&limit=100&cursor=' .. foundAnything))
+        Site = HttpService:JSONDecode(game:HttpGet("https://games.roblox.com/v1/games/" .. PlaceID .. "/servers/Public?sortOrder=Asc&limit=100&cursor=" .. foundAnything))
     end
-    local ID = ""
-    if Site.nextPageCursor and Site.nextPageCursor ~= "null" and Site.nextPageCursor ~= nil then
+
+    if Site.nextPageCursor and Site.nextPageCursor ~= "null" then
         foundAnything = Site.nextPageCursor
     end
-    local num = 0;
-    for i,v in pairs(Site.data) do
+
+    local num = 0
+    for _, v in pairs(Site.data) do
+        local ID = tostring(v.id)
         local Possible = true
-        ID = tostring(v.id)
-        if tonumber(v.maxPlayers) > tonumber(v.playing) then
-            for _,Existing in pairs(AllIDs) do
+
+        -- 🔹 Условие: меньше 10 игроков и не полный сервер
+        if tonumber(v.playing) < 10 and tonumber(v.playing) < tonumber(v.maxPlayers) then
+            for _, Existing in pairs(AllIDs) do
                 if num ~= 0 then
                     if ID == tostring(Existing) then
                         Possible = false
+                        break
                     end
                 else
                     if tonumber(actualHour) ~= tonumber(Existing) then
-                        local delFile = pcall(function()
+                        local _ = pcall(function()
                             delfile("NotSameServers.json")
-                            AllIDs = {}
-                            table.insert(AllIDs, actualHour)
+                            AllIDs = {actualHour}
                         end)
                     end
                 end
                 num = num + 1
             end
-            if Possible == true then
+
+            if Possible then
                 table.insert(AllIDs, ID)
-                wait()
                 pcall(function()
-                    writefile("NotSameServers.json", game:GetService('HttpService'):JSONEncode(AllIDs))
-                    wait()
+                    writefile("NotSameServers.json", HttpService:JSONEncode(AllIDs))
+                    task.wait(1)
                     game:GetService("TeleportService"):TeleportToPlaceInstance(PlaceID, ID, game.Players.LocalPlayer)
                 end)
-                wait(4)
+                task.wait(4)
             end
         end
     end
 end
 
 function Teleport()
-    while wait() do
+    while task.wait(1) do
         pcall(function()
             TPReturner()
             if foundAnything ~= "" then
@@ -68,5 +76,5 @@ function Teleport()
     end
 end
 
--- If you'd like to use a script before server hopping (Like a Automatic Chest collector you can put the Teleport() after it collected everything.
+-- 🚀 Запуск
 Teleport()
