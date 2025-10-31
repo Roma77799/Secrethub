@@ -5,106 +5,16 @@ if _G.gge then
 end
 _G.gge = true
 
-local PlaceID = game.PlaceId
-local AllIDs = {}
-local foundAnything = ""
-local actualHour = os.date("!*t").hour
-local HttpService = game:GetService("HttpService")
+local Players = game:GetService("Players")
 local TeleportService = game:GetService("TeleportService")
-local LocalPlayer = game.Players.LocalPlayer
 
-local isTeleporting = false -- ⚠️ Новый флаг, чтобы не спамить телепортами
-
--- Читаем/создаём файл
-local success, result = pcall(function()
-    return HttpService:JSONDecode(readfile("NotSameServers.json"))
-end)
-if success and type(result) == "table" then
-    AllIDs = result
-else
-    table.insert(AllIDs, actualHour)
-    writefile("NotSameServers.json", HttpService:JSONEncode(AllIDs))
+while true do
+    local playerCount = #Players:GetPlayers()
+    if playerCount < 10 then
+        -- Переподключение к игре
+        TeleportService:Teleport(game.PlaceId, Players.LocalPlayer)
+        break
+    end
+    wait(1)
 end
 
--- Телепорт в найденный сервер
-function TPReturner()
-    if isTeleporting then return end -- 🚫 блокируем повторный телепорт
-
-    local Site
-    if foundAnything == "" then
-        Site = HttpService:JSONDecode(game:HttpGet(
-            "https://games.roblox.com/v1/games/" .. PlaceID .. "/servers/Public?sortOrder=Asc&limit=100"
-        ))
-    else
-        Site = HttpService:JSONDecode(game:HttpGet(
-            "https://games.roblox.com/v1/games/" .. PlaceID .. "/servers/Public?sortOrder=Asc&limit=100&cursor=" .. foundAnything
-        ))
-    end
-
-    if Site.nextPageCursor and Site.nextPageCursor ~= "null" then
-        foundAnything = Site.nextPageCursor
-    end
-
-    local num = 0
-    for _, v in pairs(Site.data) do
-        local ID = tostring(v.id)
-        local Possible = true
-
-        if tonumber(v.playing) < 10 and tonumber(v.playing) < tonumber(v.maxPlayers) then
-            for _, Existing in pairs(AllIDs) do
-                if num ~= 0 then
-                    if ID == tostring(Existing) then
-                        Possible = false
-                        break
-                    end
-                else
-                    if tonumber(actualHour) ~= tonumber(Existing) then
-                        pcall(function()
-                            delfile("NotSameServers.json")
-                            AllIDs = { actualHour }
-                        end)
-                    end
-                end
-                num = num + 1
-            end
-
-            if Possible then
-                table.insert(AllIDs, ID)
-                writefile("NotSameServers.json", HttpService:JSONEncode(AllIDs))
-                
-                print("🌀 Телепортируемся в сервер:", ID)
-                isTeleporting = true
-
-                local success, err = pcall(function()
-                    TeleportService:TeleportToPlaceInstance(PlaceID, ID, LocalPlayer)
-                end)
-
-                if not success then
-                    warn("❌ Ошибка при попытке телепортации:", err)
-                    isTeleporting = false
-                end
-
-                task.wait(5)
-                break -- 🛑 выходим, чтобы не спамить другими серверами
-            end
-        end
-    end
-end
-
--- Сброс флага при неудачной попытке телепорта
-TeleportService.TeleportInitFailed:Connect(function(result)
-    warn("⚠️ Телепорт не удался:", result)
-    isTeleporting = false
-end)
-
--- Основной цикл
-function Teleport()
-    while task.wait(3) do -- чуть дольше между итерациями
-        if not isTeleporting then
-            pcall(TPReturner)
-        end
-    end
-end
-
--- 🚀 Запуск
-Teleport()
