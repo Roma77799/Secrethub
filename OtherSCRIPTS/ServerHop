@@ -10,7 +10,7 @@ local TeleportService = game:GetService("TeleportService")
 
 while true do
     local playerCount = #Players:GetPlayers()
-    if playerCount < 10 then
+    if playerCount < 11 then
         -- Переподключение к игре
         TeleportService:Teleport(game.PlaceId, Players.LocalPlayer)
         break
