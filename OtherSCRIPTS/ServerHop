@@ -8,13 +8,5 @@ _G.gge = true
 local Players = game:GetService("Players")
 local TeleportService = game:GetService("TeleportService")
 
-while true do
-    local playerCount = #Players:GetPlayers()
-    if playerCount < 11 then
-        -- Переподключение к игре
-        TeleportService:Teleport(game.PlaceId, Players.LocalPlayer)
-        break
-    end
-    wait(1)
-end
+TeleportService:Teleport(game.PlaceId)
 
