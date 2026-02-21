@@ -1,0 +1,1257 @@
+Ancient_Knives = {
+    ["Vampire's Axe"] = {
+        Image = "http://www.roblox.com/Thumbs/Asset.ashx?format=png&width=250&height=250&assetId=130837676383567&bust=7564",
+        rarity = "Ancient",
+        tags = {""},
+        section = "Halloween",
+        backgroundcolor3 = "100, 10, 255"
+    },
+    ["Nik's Scythe"] = {
+        Image = "http://www.roblox.com/Thumbs/Asset.ashx?format=png&width=250&height=250&assetId=2533350813&bust=2670",
+        rarity = "Ancient",
+        tags = {""},
+        section = "Classic",
+        backgroundcolor3 = "100, 10, 255"
+    },
+    ["Synthwave"] = {
+        Image = "rbxthumb://type=Asset&w=150&h=150&id=133828016595037&bust=5493",
+        rarity = "Ancient",
+        tags = {"Evo", "FX"},
+        section = "Current",
+        backgroundcolor3 = "100, 10, 255"
+    },
+    ["Batwing"] = {
+        Image = "http://www.roblox.com/Thumbs/Asset.ashx?format=png&width=250&height=250&assetId=375690925&bust=1943",
+        rarity = "Ancient",
+        tags = {""},
+        section = "Halloween",
+        backgroundcolor3 = "100, 10, 255"
+    },
+    ["Icecrusher"] = {
+        Image = "http://www.roblox.com/Thumbs/Asset.ashx?format=png&width=250&height=250&assetId=11855274019&bust=4469",
+        rarity = "Ancient",
+        tags = {"Evo"},
+        section = "Christmas",
+        backgroundcolor3 = "100, 10, 255"
+    },
+    ["Celestial"] = {
+        Image = "rbxthumb://type=Asset&w=150&h=150&id=136673966529736&bust=7503",
+        rarity = "Ancient",
+        tags = {""},
+        section = "Christmas",
+        backgroundcolor3 = "100, 10, 255"
+    },
+    ["Gingerscythe"] = {
+        Image = "http://www.roblox.com/Thumbs/Asset.ashx?format=png&width=250&height=250&assetId=15683188776&bust=6371",
+        rarity = "Ancient",
+        tags = {"Evo"},
+        section = "Christmas",
+        backgroundcolor3 = "100, 10, 255"
+    },
+    ["Hallowscythe"] = {
+        Image = "http://www.roblox.com/Thumbs/Asset.ashx?format=png&width=250&height=250&assetId=5877016863&bust=237",
+        rarity = "Ancient",
+        tags = {""},
+        section = "Halloween",
+        backgroundcolor3 = "100, 10, 255"
+    },
+    ["Reaver"] = {
+        Image = "http://www.roblox.com/Thumbs/Asset.ashx?format=png&width=250&height=250&assetId=7791640819&bust=8280",
+        rarity = "Ancient",
+        tags = {"Evo"},
+        section = "Halloween",
+        backgroundcolor3 = "100, 10, 255"
+    },
+    ["Swirly Axe"] = {
+        Image = "http://www.roblox.com/Thumbs/Asset.ashx?format=png&width=250&height=250&assetId=8304801000&bust=5052",
+        rarity = "Ancient",
+        tags = {""},
+        section = "Christmas",
+        backgroundcolor3 = "100, 10, 255"
+    },
+    ["Traveler's Axe"] = {
+        Image = "http://www.roblox.com/Thumbs/Asset.ashx?format=png&width=250&height=250&assetId=15070870271&bust=1447",
+        rarity = "Ancient",
+        tags = {""},
+        section = "Halloween",
+        backgroundcolor3 = "100, 10, 255"
+    },
+    ["Icebreaker"] = {
+        Image = "http://www.roblox.com/Thumbs/Asset.ashx?format=png&width=250&height=250&assetId=6121572723&bust=1566",
+        rarity = "Ancient",
+        tags = {""},
+        section = "Christmas",
+        backgroundcolor3 = "100, 10, 255"
+    },
+    ["Elderwood Scythe"] = {
+        Image = "http://www.roblox.com/Thumbs/Asset.ashx?format=png&width=250&height=250&assetId=4468593654&bust=5083",
+        rarity = "Ancient",
+        tags = {""},
+        section = "Halloween",
+        backgroundcolor3 = "100, 10, 255"
+    },
+    ["Logchopper"] = {
+        Image = "http://www.roblox.com/Thumbs/Asset.ashx?format=png&width=250&height=250&assetId=4528268775&bust=3770",
+        rarity = "Ancient",
+        tags = {""},
+        section = "Christmas",
+        backgroundcolor3 = "100, 10, 255"
+    },
+    ["Icewing"] = {
+        Image = "http://www.roblox.com/Thumbs/Asset.ashx?format=png&width=250&height=250&assetId=2669997196&bust=4623",
+        rarity = "Ancient",
+        tags = {""},
+        section = "Christmas",
+        backgroundcolor3 = "100, 10, 255"
+    },
+}
+
+Ancient_Guns = {
+    ["Harvester"] = {
+        Image = "http://www.roblox.com/Thumbs/Asset.ashx?format=png&width=250&height=250&assetId=7800847534&bust=953",
+        rarity = "Ancient",
+        tags = {""},
+        section = "Halloween",
+        backgroundcolor3 = "100, 10, 255"
+    },
+    ["Icepiercer"] = {
+        Image = "http://www.roblox.com/Thumbs/Asset.ashx?format=png&width=250&height=250&assetId=11874071041&bust=2797",
+        rarity = "Ancient",
+        tags = {""},
+        section = "Christmas",
+        backgroundcolor3 = "100, 10, 255"
+    },
+    ["Gingerscope"] = {
+        Image = "http://www.roblox.com/Thumbs/Asset.ashx?format=png&width=250&height=250&assetId=15666596216&bust=1896",
+        rarity = "Ancient",
+        tags = {"FX"},
+        section = "Christmas",
+        backgroundcolor3 = "100, 10, 255"
+    },
+}
+
+Godly_Guns = {
+    ["Darkshot"] = {
+        Image = "http://www.roblox.com/Thumbs/Asset.ashx?format=png&width=250&height=250&assetId=15080280688&bust=6293",
+        rarity = "Godly",
+        tags = {""},
+        section = "Halloween",
+        backgroundcolor3 = "255, 0, 179"
+    },
+    ["Gingermint"] = {
+        Image = "http://www.roblox.com/Thumbs/Asset.ashx?format=png&width=250&height=250&assetId=11872179646&bust=7491",
+        rarity = "Godly",
+        tags = {""},
+        section = "Christmas",
+        backgroundcolor3 = "255, 0, 179"
+    },
+    ["Red Luger"] = {
+        Image = "http://www.roblox.com/Thumbs/Asset.ashx?format=png&width=250&height=250&assetId=332044583&bust=4799",
+        rarity = "Godly",
+        tags = {""},
+        section = "Christmas",
+        backgroundcolor3 = "255, 0, 179"
+    },
+    ["Makeshift"] = {
+        Image = "http://www.roblox.com/Thumbs/Asset.ashx?format=png&width=250&height=250&assetId=11229837140&bust=5473",
+        rarity = "Godly",
+        tags = {""},
+        section = "Halloween",
+        backgroundcolor3 = "255, 0, 179"
+    },
+    ["Blizzard"] = {
+        Image = "rbxthumb://type=Asset&w=150&h=150&id=88928894807422&bust=5072",
+        rarity = "Godly",
+        tags = {""},
+        section = "Christmas",
+        backgroundcolor3 = "255, 0, 179"
+    },
+    ["Luger"] = {
+        Image = "rbxassetid://3187399148&bust=2485",
+        rarity = "Godly",
+        tags = {""},
+        section = "Classic",
+        backgroundcolor3 = "255, 0, 179"
+    },
+    ["Flowerwood Gun"] = {
+        Image = "http://www.roblox.com/Thumbs/Asset.ashx?format=png&width=250&height=250&assetId=16963894455&bust=8556",
+        rarity = "Godly",
+        tags = {""},
+        section = "Current",
+        backgroundcolor3 = "255, 0, 179"
+    },
+    ["Bauble_T"] = {
+        Image = "rbxthumb://type=Asset&w=150&h=150&id=137938731902685&bust=4308",
+        rarity = "Godly",
+        tags = {"Chroma"},
+        section = "Christmas",
+        backgroundcolor3 = "255, 0, 179"
+    },
+    ["Sunrise_T"] = {
+        Image = "rbxthumb://type=Asset&w=150&h=150&id=124766755976937&bust=8475",
+        rarity = "Godly",
+        tags = {"Chroma", "FX"},
+        section = "Current",
+        backgroundcolor3 = "255, 0, 179"
+    },
+    ["Rainbow Gun"] = {
+        Image = "http://www.roblox.com/Thumbs/Asset.ashx?format=png&width=250&height=250&assetId=12966354606&bust=3453",
+        rarity = "Godly",
+        tags = {""},
+        section = "Current",
+        backgroundcolor3 = "255, 0, 179"
+    },
+    ["Evergun_T"] = {
+        Image = "rbxassetid://15694208971&bust=7299",
+        rarity = "Godly",
+        tags = {"Chroma", "FX"},
+        section = "Christmas",
+        backgroundcolor3 = "255, 0, 179"
+    },
+    ["Darkbringer_T"] = {
+        Image = "http://www.roblox.com/asset/?id=4751507011&bust=4043",
+        rarity = "Godly",
+        tags = {"Chroma"},
+        section = "Current",
+        backgroundcolor3 = "255, 0, 179"
+    },
+    ["Sunrise"] = {
+        Image = "rbxthumb://type=Asset&w=150&h=150&id=129480661108374&bust=9857",
+        rarity = "Godly",
+        tags = {"FX"},
+        section = "Current",
+        backgroundcolor3 = "255, 0, 179"
+    },
+    ["Amerilaser"] = {
+        Image = "http://www.roblox.com/Thumbs/Asset.ashx?format=png&width=250&height=250&assetId=446050753&bust=3417",
+        rarity = "Godly",
+        tags = {""},
+        section = "Classic",
+        backgroundcolor3 = "255, 0, 179"
+    },
+    ["Shark_T"] = {
+        Image = "rbxassetid://3187421856&bust=8598",
+        rarity = "Godly",
+        tags = {"Chroma"},
+        section = "Classic",
+        backgroundcolor3 = "255, 0, 179"
+    },
+    ["Swirly Gun_T"] = {
+        Image = "http://www.roblox.com/asset/?id=8311453396&bust=1680",
+        rarity = "Godly",
+        tags = {"Chroma"},
+        section = "Christmas",
+        backgroundcolor3 = "255, 0, 179"
+    },
+    ["Luger_T"] = {
+        Image = "rbxassetid://3187399258&bust=2222",
+        rarity = "Godly",
+        tags = {"Chroma"},
+        section = "Classic",
+        backgroundcolor3 = "255, 0, 179"
+    },
+    ["Evergun"] = {
+        Image = "rbxassetid://15694357721&bust=7494",
+        rarity = "Godly",
+        tags = {"FX"},
+        section = "Christmas",
+        backgroundcolor3 = "255, 0, 179"
+    },
+    ["Lightbringer"] = {
+        Image = "http://www.roblox.com/asset/?id=4751387063&bust=4706",
+        rarity = "Godly",
+        tags = {""},
+        section = "Current",
+        backgroundcolor3 = "255, 0, 179"
+    },
+    ["Laser_T"] = {
+        Image = "rbxassetid://3187422628&bust=2931",
+        rarity = "Godly",
+        tags = {"Chroma"},
+        section = "Classic",
+        backgroundcolor3 = "255, 0, 179"
+    },
+    ["Lugercane"] = {
+        Image = "http://www.roblox.com/Thumbs/Asset.ashx?format=png&width=250&height=250&assetId=4535482609&bust=535",
+        rarity = "Godly",
+        tags = {""},
+        section = "Christmas",
+        backgroundcolor3 = "255, 0, 179"
+    },
+    ["Shark"] = {
+        Image = "rbxassetid://3187421705&bust=5089",
+        rarity = "Godly",
+        tags = {""},
+        section = "Classic",
+        backgroundcolor3 = "255, 0, 179"
+    },
+    ["Minty"] = {
+        Image = "http://www.roblox.com/Thumbs/Asset.ashx?format=png&width=250&height=250&assetId=4528291487&bust=2338",
+        rarity = "Godly",
+        tags = {""},
+        section = "Christmas",
+        backgroundcolor3 = "255, 0, 179"
+    },
+    ["Traveler's Gun_T"] = {
+        Image = "rbxassetid://15097920149&bust=4438",
+        rarity = "Godly",
+        tags = {"Chroma"},
+        section = "Halloween",
+        backgroundcolor3 = "255, 0, 179"
+    },
+    ["Lightbringer_T"] = {
+        Image = "http://www.roblox.com/asset/?id=4751507078&bust=7689",
+        rarity = "Godly",
+        tags = {"Chroma"},
+        section = "Current",
+        backgroundcolor3 = "255, 0, 179"
+    },
+    ["Ginger Luger"] = {
+        Image = "http://www.roblox.com/Thumbs/Asset.ashx?format=png&width=250&height=250&assetId=2674983099&bust=6121",
+        rarity = "Godly",
+        tags = {""},
+        section = "Christmas",
+        backgroundcolor3 = "255, 0, 179"
+    },
+    ["Vampire's Gun_T"] = {
+        Image = "http://www.roblox.com/Thumbs/Asset.ashx?format=png&width=250&height=250&assetId=85107391551890&bust=6579",
+        rarity = "Godly",
+        tags = {"Chroma"},
+        section = "Halloween",
+        backgroundcolor3 = "255, 0, 179"
+    },
+    ["Raygun_T"] = {
+        Image = "rbxthumb://type=Asset&w=150&h=150&id=83259634072260&bust=5215",
+        rarity = "Godly",
+        tags = {"Chroma"},
+        section = "Halloween",
+        backgroundcolor3 = "255, 0, 179"
+    },
+    ["Constellation_T"] = {
+        Image = "rbxthumb://type=Asset&w=150&h=150&id=98517109155878&bust=2799",
+        rarity = "Godly",
+        tags = {"Chroma"},
+        section = "Christmas",
+        backgroundcolor3 = "255, 0, 179"
+    },
+    ["Jinglegun"] = {
+        Image = "http://www.roblox.com/Thumbs/Asset.ashx?format=png&width=250&height=250&assetId=6121678262&bust=6147",
+        rarity = "Godly",
+        tags = {""},
+        section = "Christmas",
+        backgroundcolor3 = "255, 0, 179"
+    },
+    ["Sugar"] = {
+        Image = "rbxassetid://3215356000&bust=136",
+        rarity = "Godly",
+        tags = {""},
+        section = "Christmas",
+        backgroundcolor3 = "255, 0, 179"
+    },
+    ["Treat_T"] = {
+        Image = "rbxassetid://98449489175264&bust=751",
+        rarity = "Godly",
+        tags = {"Chroma"},
+        section = "Current",
+        backgroundcolor3 = "255, 0, 179"
+    },
+    ["Elderwood Revolver"] = {
+        Image = "http://www.roblox.com/Thumbs/Asset.ashx?format=png&width=250&height=250&assetId=4468571736&bust=2824",
+        rarity = "Godly",
+        tags = {""},
+        section = "Halloween",
+        backgroundcolor3 = "255, 0, 179"
+    },
+    ["Bauble"] = {
+        Image = "rbxthumb://type=Asset&w=150&h=150&id=84481559639371&bust=4646",
+        rarity = "Godly",
+        tags = {""},
+        section = "Christmas",
+        backgroundcolor3 = "255, 0, 179"
+    },
+    ["Borealis"] = {
+        Image = "rbxthumb://type=Asset&w=150&h=150&id=108635848059846&bust=2978",
+        rarity = "Godly",
+        tags = {""},
+        section = "Christmas",
+        backgroundcolor3 = "255, 0, 179"
+    },
+    ["Blizzard_T"] = {
+        Image = "rbxassetid://128221996859844&bust=5165",
+        rarity = "Godly",
+        tags = {"Chroma"},
+        section = "Christmas",
+        backgroundcolor3 = "255, 0, 179"
+    },
+    ["Blossom"] = {
+        Image = "http://www.roblox.com/Thumbs/Asset.ashx?format=png&width=250&height=250&assetId=12339377105&bust=5283",
+        rarity = "Godly",
+        tags = {""},
+        section = "Current",
+        backgroundcolor3 = "255, 0, 179"
+    },
+    ["Snowcannon"] = {
+        Image = "rbxthumb://type=Asset&w=150&h=150&id=129186939023729&bust=4171",
+        rarity = "Godly",
+        tags = {""},
+        section = "Christmas",
+        backgroundcolor3 = "255, 0, 179"
+    },
+    ["Watergun"] = {
+        Image = "http://www.roblox.com/Thumbs/Asset.ashx?format=png&width=250&height=250&assetId=18351388416&bust=2603",
+        rarity = "Godly",
+        tags = {""},
+        section = "Current",
+        backgroundcolor3 = "255, 0, 179"
+    },
+    ["Laser"] = {
+        Image = "rbxassetid://3187422496&bust=1795",
+        rarity = "Godly",
+        tags = {""},
+        section = "Classic",
+        backgroundcolor3 = "255, 0, 179"
+    },
+    ["Plasmabeam"] = {
+        Image = "http://www.roblox.com/Thumbs/Asset.ashx?format=png&width=250&height=250&assetId=10014717343&bust=9044",
+        rarity = "Godly",
+        tags = {""},
+        section = "Current",
+        backgroundcolor3 = "255, 0, 179"
+    },
+    ["Swirly Gun"] = {
+        Image = "http://www.roblox.com/Thumbs/Asset.ashx?format=png&width=250&height=250&assetId=8305002569&bust=8813",
+        rarity = "Godly",
+        tags = {""},
+        section = "Christmas",
+        backgroundcolor3 = "255, 0, 179"
+    },
+    ["Icebeam"] = {
+        Image = "http://www.roblox.com/Thumbs/Asset.ashx?format=png&width=250&height=250&assetId=8305000161&bust=8116",
+        rarity = "Godly",
+        tags = {""},
+        section = "Christmas",
+        backgroundcolor3 = "255, 0, 179"
+    },
+    ["Watergun_T"] = {
+        Image = "rbxassetid://18351465514&bust=2198",
+        rarity = "Godly",
+        tags = {"Chroma"},
+        section = "Current",
+        backgroundcolor3 = "255, 0, 179"
+    },
+    ["Snowcannon_T"] = {
+        Image = "rbxassetid://85283931666319&bust=2065",
+        rarity = "Godly",
+        tags = {"Chroma"},
+        section = "Christmas",
+        backgroundcolor3 = "255, 0, 179"
+    },
+    ["Ocean"] = {
+        Image = "rbxassetid://13933165014&bust=6586",
+        rarity = "Godly",
+        tags = {""},
+        section = "Current",
+        backgroundcolor3 = "255, 0, 179"
+    },
+    ["Iceblaster"] = {
+        Image = "http://www.roblox.com/Thumbs/Asset.ashx?format=png&width=250&height=250&assetId=6121579464&bust=6196",
+        rarity = "Godly",
+        tags = {""},
+        section = "Christmas",
+        backgroundcolor3 = "255, 0, 179"
+    },
+    ["Hallowgun"] = {
+        Image = "http://www.roblox.com/Thumbs/Asset.ashx?format=png&width=250&height=250&assetId=5877089721&bust=1182",
+        rarity = "Godly",
+        tags = {""},
+        section = "Halloween",
+        backgroundcolor3 = "255, 0, 179"
+    },
+    ["Raygun"] = {
+        Image = "rbxthumb://type=Asset&w=150&h=150&id=139431943195380&bust=6957",
+        rarity = "Godly",
+        tags = {""},
+        section = "Halloween",
+        backgroundcolor3 = "255, 0, 179"
+    },
+    ["Soul"] = {
+        Image = "http://www.roblox.com/Thumbs/Asset.ashx?format=png&width=250&height=250&assetId=75233248021696&bust=2452",
+        rarity = "Godly",
+        tags = {""},
+        section = "Halloween",
+        backgroundcolor3 = "255, 0, 179"
+    },
+    ["Flora"] = {
+        Image = "rbxassetid://139276091458016&bust=4557",
+        rarity = "Godly",
+        tags = {""},
+        section = "Current",
+        backgroundcolor3 = "255, 0, 179"
+    },
+    ["Pearlshine"] = {
+        Image = "http://www.roblox.com/Thumbs/Asset.ashx?format=png&width=250&height=250&assetId=18322646152&bust=2191",
+        rarity = "Godly",
+        tags = {""},
+        section = "Current",
+        backgroundcolor3 = "255, 0, 179"
+    },
+    ["Xenoshot"] = {
+        Image = "rbxthumb://type=Asset&w=150&h=150&id=96859273002742&bust=1827",
+        rarity = "Godly",
+        tags = {""},
+        section = "Halloween",
+        backgroundcolor3 = "255, 0, 179"
+    },
+    ["Treat"] = {
+        Image = "rbxthumb://type=Asset&w=150&h=150&id=131626924640663&bust=6162",
+        rarity = "Godly",
+        tags = {""},
+        section = "Current",
+        backgroundcolor3 = "255, 0, 179"
+    },
+    ["Spectre"] = {
+        Image = "http://www.roblox.com/Thumbs/Asset.ashx?format=png&width=250&height=250&assetId=11229779932&bust=6714",
+        rarity = "Godly",
+        tags = {""},
+        section = "Halloween",
+        backgroundcolor3 = "255, 0, 179"
+    },
+    ["Traveler's Gun"] = {
+        Image = "http://www.roblox.com/Thumbs/Asset.ashx?format=png&width=250&height=250&assetId=15091442039&bust=6602",
+        rarity = "Godly",
+        tags = {""},
+        section = "Halloween",
+        backgroundcolor3 = "255, 0, 179"
+    },
+    ["Blaster"] = {
+        Image = "http://www.roblox.com/Thumbs/Asset.ashx?format=png&width=250&height=250&assetId=386277381&bust=9487",
+        rarity = "Godly",
+        tags = {""},
+        section = "Classic",
+        backgroundcolor3 = "255, 0, 179"
+    },
+    ["Green Luger"] = {
+        Image = "http://www.roblox.com/Thumbs/Asset.ashx?format=png&width=250&height=250&assetId=332044679&bust=2776",
+        rarity = "Godly",
+        tags = {""},
+        section = "Christmas",
+        backgroundcolor3 = "255, 0, 179"
+    },
+    ["Vampire's Gun"] = {
+        Image = "http://www.roblox.com/Thumbs/Asset.ashx?format=png&width=250&height=250&assetId=90274872705656&bust=3693",
+        rarity = "Godly",
+        tags = {""},
+        section = "Halloween",
+        backgroundcolor3 = "255, 0, 179"
+    },
+    ["Darkbringer"] = {
+        Image = "http://www.roblox.com/asset/?id=4751387674&bust=9297",
+        rarity = "Godly",
+        tags = {""},
+        section = "Current",
+        backgroundcolor3 = "255, 0, 179"
+    },
+    ["Constellation"] = {
+        Image = "rbxthumb://type=Asset&w=150&h=150&id=114197436469014&bust=278",
+        rarity = "Godly",
+        tags = {""},
+        section = "Christmas",
+        backgroundcolor3 = "255, 0, 179"
+    },
+}
+
+Godly_Knives = {
+    ["Eternal II"] = {
+        Image = "http://www.roblox.com/Thumbs/Asset.ashx?format=png&width=250&height=250&assetId=2545253030&bust=8357",
+        rarity = "Godly",
+        tags = {""},
+        section = "Classic",
+        backgroundcolor3 = "255, 0, 179"
+    },
+    ["Seer_T"] = {
+        Image = "rbxassetid://3184140321&bust=7219",
+        rarity = "Godly",
+        tags = {"Chroma"},
+        section = "Classic",
+        backgroundcolor3 = "255, 0, 179"
+    },
+    ["Bioblade"] = {
+        Image = "http://www.roblox.com/asset/?id=4751540097&bust=2137",
+        rarity = "Godly",
+        tags = {""},
+        section = "Current",
+        backgroundcolor3 = "255, 0, 179"
+    },
+    ["Snow Dagger_T"] = {
+        Image = "rbxassetid://88800167694751&bust=3364",
+        rarity = "Godly",
+        tags = {"Chroma"},
+        section = "Christmas",
+        backgroundcolor3 = "255, 0, 179"
+    },
+    ["Gingerblade"] = {
+        Image = "http://www.roblox.com/Thumbs/Asset.ashx?format=png&width=250&height=250&assetId=2669336659&bust=6969",
+        rarity = "Godly",
+        tags = {""},
+        section = "Christmas",
+        backgroundcolor3 = "255, 0, 179"
+    },
+    ["Winter's Edge"] = {
+        Image = "http://www.roblox.com/Thumbs/Asset.ashx?format=png&width=250&height=250&assetId=1268708987&bust=4884",
+        rarity = "Godly",
+        tags = {""},
+        section = "Christmas",
+        backgroundcolor3 = "255, 0, 179"
+    },
+    ["Frostbite"] = {
+        Image = "http://www.roblox.com/asset/?id=4528373246&bust=3800",
+        rarity = "Godly",
+        tags = {""},
+        section = "Christmas",
+        backgroundcolor3 = "255, 0, 179"
+    },
+    ["Waves"] = {
+        Image = "rbxassetid://13933066522&bust=6478",
+        rarity = "Godly",
+        tags = {""},
+        section = "Current",
+        backgroundcolor3 = "255, 0, 179"
+    },
+    ["Sunset_T"] = {
+        Image = "rbxassetid://118232478609755&bust=6145",
+        rarity = "Godly",
+        tags = {"Chroma", "FX"},
+        section = "Current",
+        backgroundcolor3 = "255, 0, 179"
+    },
+    ["Prismatic"] = {
+        Image = "http://www.roblox.com/Thumbs/Asset.ashx?format=png&width=250&height=250&assetId=5360359935&bust=1330",
+        rarity = "Godly",
+        tags = {""},
+        section = "Current",
+        backgroundcolor3 = "255, 0, 179"
+    },
+    ["Evergreen_T"] = {
+        Image = "rbxassetid://15694192241&bust=631",
+        rarity = "Godly",
+        tags = {"Chroma", "FX"},
+        section = "Christmas",
+        backgroundcolor3 = "255, 0, 179"
+    },
+    ["Iceflake"] = {
+        Image = "http://www.roblox.com/Thumbs/Asset.ashx?format=png&width=250&height=250&assetId=8304818186&bust=8276",
+        rarity = "Godly",
+        tags = {""},
+        section = "Christmas",
+        backgroundcolor3 = "255, 0, 179"
+    },
+    ["Nightblade"] = {
+        Image = "http://www.roblox.com/Thumbs/Asset.ashx?format=png&width=250&height=250&assetId=475478854&bust=1462",
+        rarity = "Godly",
+        tags = {""},
+        section = "Classic",
+        backgroundcolor3 = "255, 0, 179"
+    },
+    ["Sweet_T"] = {
+        Image = "rbxassetid://90923771881248&bust=970",
+        rarity = "Godly",
+        tags = {"Chroma"},
+        section = "Current",
+        backgroundcolor3 = "255, 0, 179"
+    },
+    ["Deathshard"] = {
+        Image = "rbxassetid://3175017717&bust=4809",
+        rarity = "Godly",
+        tags = {""},
+        section = "Classic",
+        backgroundcolor3 = "255, 0, 179"
+    },
+    ["Heat"] = {
+        Image = "rbxassetid://3187444758&bust=1057",
+        rarity = "Godly",
+        tags = {""},
+        section = "Classic",
+        backgroundcolor3 = "255, 0, 179"
+    },
+    ["Orange Seer"] = {
+        Image = "rbxassetid://3184139504&bust=78",
+        rarity = "Godly",
+        tags = {""},
+        section = "Classic",
+        backgroundcolor3 = "255, 0, 179"
+    },
+    ["Heart Wand"] = {
+        Image = "rbxthumb://type=Asset&w=150&h=150&id=118334707962654&bust=4741",
+        rarity = "Godly",
+        tags = {""},
+        section = "Current",
+        backgroundcolor3 = "255, 0, 179"
+    },
+    ["Eternal"] = {
+        Image = "http://www.roblox.com/Thumbs/Asset.ashx?format=png&width=250&height=250&assetId=538706317&bust=6115",
+        rarity = "Godly",
+        tags = {""},
+        section = "Classic",
+        backgroundcolor3 = "255, 0, 179"
+    },
+    ["Ice Dragon"] = {
+        Image = "http://www.roblox.com/Thumbs/Asset.ashx?format=png&width=250&height=250&assetId=585846454&bust=9111",
+        rarity = "Godly",
+        tags = {""},
+        section = "Christmas",
+        backgroundcolor3 = "255, 0, 179"
+    },
+    ["Clockwork"] = {
+        Image = "http://www.roblox.com/Thumbs/Asset.ashx?format=png&width=250&height=250&assetId=360609441&bust=6572",
+        rarity = "Godly",
+        tags = {""},
+        section = "Classic",
+        backgroundcolor3 = "255, 0, 179"
+    },
+    ["Xmas"] = {
+        Image = "http://www.roblox.com/Thumbs/Asset.ashx?format=png&width=250&height=250&assetId=332077449&bust=2752",
+        rarity = "Godly",
+        tags = {""},
+        section = "Christmas",
+        backgroundcolor3 = "255, 0, 179"
+    },
+    ["Turkey"] = {
+        Image = "rbxassetid://15413162319&bust=9988",
+        rarity = "Godly",
+        tags = {""},
+        section = "Current",
+        backgroundcolor3 = "255, 0, 179"
+    },
+    ["Eternal IV"] = {
+        Image = "http://www.roblox.com/Thumbs/Asset.ashx?format=png&width=250&height=250&assetId=4999958740&bust=1804",
+        rarity = "Godly",
+        tags = {""},
+        section = "Current",
+        backgroundcolor3 = "255, 0, 179"
+    },
+    ["Sakura"] = {
+        Image = "http://www.roblox.com/Thumbs/Asset.ashx?format=png&width=250&height=250&assetId=12339366064&bust=9719",
+        rarity = "Godly",
+        tags = {""},
+        section = "Current",
+        backgroundcolor3 = "255, 0, 179"
+    },
+    ["Xenoknife"] = {
+        Image = "rbxthumb://type=Asset&w=150&h=150&id=115021756767182&bust=8724",
+        rarity = "Godly",
+        tags = {""},
+        section = "Halloween",
+        backgroundcolor3 = "255, 0, 179"
+    },
+    ["BattleAxe II"] = {
+        Image = "http://www.roblox.com/Thumbs/Asset.ashx?format=png&width=250&height=250&assetId=2513535503&bust=1432",
+        rarity = "Godly",
+        tags = {""},
+        section = "Halloween",
+        backgroundcolor3 = "255, 0, 179"
+    },
+    ["Fang"] = {
+        Image = "rbxassetid://3187397768&bust=8165",
+        rarity = "Godly",
+        tags = {""},
+        section = "Classic",
+        backgroundcolor3 = "255, 0, 179"
+    },
+    ["Nebula"] = {
+        Image = "http://www.roblox.com/Thumbs/Asset.ashx?format=png&width=250&height=250&assetId=6598123521&bust=8842",
+        rarity = "Godly",
+        tags = {""},
+        section = "Current",
+        backgroundcolor3 = "255, 0, 179"
+    },
+    ["Australis"] = {
+        Image = "rbxthumb://type=Asset&w=150&h=150&id=101343256002049&bust=477",
+        rarity = "Godly",
+        tags = {""},
+        section = "Christmas",
+        backgroundcolor3 = "255, 0, 179"
+    },
+    ["Candleflame"] = {
+        Image = "http://www.roblox.com/Thumbs/Asset.ashx?format=png&width=250&height=250&assetId=7805833970&bust=2616",
+        rarity = "Godly",
+        tags = {""},
+        section = "Halloween",
+        backgroundcolor3 = "255, 0, 179"
+    },
+    ["Boneblade"] = {
+        Image = "http://www.roblox.com/Thumbs/Asset.ashx?format=png&width=250&height=250&assetId=2513505477&bust=1602",
+        rarity = "Godly",
+        tags = {""},
+        section = "Halloween",
+        backgroundcolor3 = "255, 0, 179"
+    },
+    ["Evergreen"] = {
+        Image = "rbxassetid://15694357137&bust=1656",
+        rarity = "Godly",
+        tags = {"FX"},
+        section = "Christmas",
+        backgroundcolor3 = "255, 0, 179"
+    },
+    ["Gemstone_T"] = {
+        Image = "rbxassetid://3183657875&bust=8603",
+        rarity = "Godly",
+        tags = {"Chroma"},
+        section = "Current",
+        backgroundcolor3 = "255, 0, 179"
+    },
+    ["Snow Dagger"] = {
+        Image = "rbxthumb://type=Asset&w=150&h=150&id=95328449981238&bust=638",
+        rarity = "Godly",
+        tags = {""},
+        section = "Christmas",
+        backgroundcolor3 = "255, 0, 179"
+    },
+    ["Old Glory"] = {
+        Image = "http://www.roblox.com/Thumbs/Asset.ashx?format=png&width=250&height=250&assetId=446047742&bust=9217",
+        rarity = "Godly",
+        tags = {""},
+        section = "Classic",
+        backgroundcolor3 = "255, 0, 179"
+    },
+    ["Saw"] = {
+        Image = "rbxassetid://3187397991&bust=272",
+        rarity = "Godly",
+        tags = {""},
+        section = "Classic",
+        backgroundcolor3 = "255, 0, 179"
+    },
+    ["Ornament_T"] = {
+        Image = "rbxassetid://74528014775455&bust=6823",
+        rarity = "Godly",
+        tags = {"Chroma"},
+        section = "Christmas",
+        backgroundcolor3 = "255, 0, 179"
+    },
+    ["Pearl"] = {
+        Image = "http://www.roblox.com/Thumbs/Asset.ashx?format=png&width=250&height=250&assetId=18322621319&bust=6832",
+        rarity = "Godly",
+        tags = {""},
+        section = "Current",
+        backgroundcolor3 = "255, 0, 179"
+    },
+    ["Tides_T"] = {
+        Image = "rbxassetid://3187398906&bust=2391",
+        rarity = "Godly",
+        tags = {"Chroma"},
+        section = "Classic",
+        backgroundcolor3 = "255, 0, 179"
+    },
+    ["Sunset"] = {
+        Image = "rbxthumb://type=Asset&w=150&h=150&id=103526268515240&bust=4768",
+        rarity = "Godly",
+        tags = {"FX"},
+        section = "Current",
+        backgroundcolor3 = "255, 0, 179"
+    },
+    ["Fang_T"] = {
+        Image = "rbxassetid://3187397850&bust=2312",
+        rarity = "Godly",
+        tags = {"Chroma"},
+        section = "Classic",
+        backgroundcolor3 = "255, 0, 179"
+    },
+    ["Ghostblade"] = {
+        Image = "http://www.roblox.com/Thumbs/Asset.ashx?format=png&width=250&height=250&assetId=4217586790&bust=2032",
+        rarity = "Godly",
+        tags = {""},
+        section = "Halloween",
+        backgroundcolor3 = "255, 0, 179"
+    },
+    ["Saw_T"] = {
+        Image = "rbxassetid://3187398132&bust=3958",
+        rarity = "Godly",
+        tags = {"Chroma"},
+        section = "Classic",
+        backgroundcolor3 = "255, 0, 179"
+    },
+    ["Deathshard_T"] = {
+        Image = "rbxassetid://3187397317&bust=7659",
+        rarity = "Godly",
+        tags = {"Chroma"},
+        section = "Classic",
+        backgroundcolor3 = "255, 0, 179"
+    },
+    ["Slasher_T"] = {
+        Image = "rbxassetid://3187398385&bust=9275",
+        rarity = "Godly",
+        tags = {"Chroma"},
+        section = "Classic",
+        backgroundcolor3 = "255, 0, 179"
+    },
+    ["Boneblade_T"] = {
+        Image = "http://www.roblox.com/Thumbs/Asset.ashx?format=png&width=250&height=250&assetId=2513597845&bust=2204",
+        rarity = "Godly",
+        tags = {"Chroma"},
+        section = "Halloween",
+        backgroundcolor3 = "255, 0, 179"
+    },
+    ["Alienbeam_T"] = {
+        Image = "rbxthumb://type=Asset&w=150&h=150&id=104256106059730&bust=7686",
+        rarity = "Godly",
+        tags = {"Chroma"},
+        section = "Halloween",
+        backgroundcolor3 = "255, 0, 179"
+    },
+    ["Snowstorm_T"] = {
+        Image = "rbxassetid://138236810069600&bust=6364",
+        rarity = "Godly",
+        tags = {"Chroma"},
+        section = "Christmas",
+        backgroundcolor3 = "255, 0, 179"
+    },
+    ["Cookiecane"] = {
+        Image = "http://www.roblox.com/Thumbs/Asset.ashx?format=png&width=250&height=250&assetId=11855306927&bust=7975",
+        rarity = "Godly",
+        tags = {""},
+        section = "Christmas",
+        backgroundcolor3 = "255, 0, 179"
+    },
+    ["Heat_T"] = {
+        Image = "rbxassetid://3187444849&bust=2986",
+        rarity = "Godly",
+        tags = {"Chroma"},
+        section = "Classic",
+        backgroundcolor3 = "255, 0, 179"
+    },
+    ["Vampire's Edge"] = {
+        Image = "http://www.roblox.com/Thumbs/Asset.ashx?format=png&width=250&height=250&assetId=5873256998&bust=9492",
+        rarity = "Godly",
+        tags = {""},
+        section = "Halloween",
+        backgroundcolor3 = "255, 0, 179"
+    },
+    ["Gingerblade_T"] = {
+        Image = "http://www.roblox.com/Thumbs/Asset.ashx?format=png&width=250&height=250&assetId=2672351679&bust=4256",
+        rarity = "Godly",
+        tags = {"Chroma"},
+        section = "Christmas",
+        backgroundcolor3 = "255, 0, 179"
+    },
+    ["Darksword"] = {
+        Image = "http://www.roblox.com/Thumbs/Asset.ashx?format=png&width=250&height=250&assetId=15080267070&bust=3196",
+        rarity = "Godly",
+        tags = {""},
+        section = "Halloween",
+        backgroundcolor3 = "255, 0, 179"
+    },
+    ["Elderwood Blade_T"] = {
+        Image = "http://www.roblox.com/asset/?id=11255021976&bust=5358",
+        rarity = "Godly",
+        tags = {"Chroma"},
+        section = "Halloween",
+        backgroundcolor3 = "255, 0, 179"
+    },
+    ["Heart Wand_T"] = {
+        Image = "rbxassetid://99154743764163&bust=5151",
+        rarity = "Godly",
+        tags = {"Chroma"},
+        section = "Current",
+        backgroundcolor3 = "255, 0, 179"
+    },
+    ["Handsaw"] = {
+        Image = "http://www.roblox.com/Thumbs/Asset.ashx?format=png&width=250&height=250&assetId=332042435&bust=3110",
+        rarity = "Godly",
+        tags = {""},
+        section = "Christmas",
+        backgroundcolor3 = "255, 0, 179"
+    },
+    ["Chill"] = {
+        Image = "http://www.roblox.com/Thumbs/Asset.ashx?format=png&width=250&height=250&assetId=332022166&bust=2328",
+        rarity = "Godly",
+        tags = {""},
+        section = "Christmas",
+        backgroundcolor3 = "255, 0, 179"
+    },
+    ["Virtual"] = {
+        Image = "http://www.roblox.com/Thumbs/Asset.ashx?format=png&width=250&height=250&assetId=386276987&bust=2826",
+        rarity = "Godly",
+        tags = {""},
+        section = "Classic",
+        backgroundcolor3 = "255, 0, 179"
+    },
+    ["Spirit"] = {
+        Image = "http://www.roblox.com/Thumbs/Asset.ashx?format=png&width=250&height=250&assetId=107190526940939&bust=5791",
+        rarity = "Godly",
+        tags = {""},
+        section = "Halloween",
+        backgroundcolor3 = "255, 0, 179"
+    },
+    ["Seer"] = {
+        Image = "rbxassetid://3184139765&bust=1159",
+        rarity = "Godly",
+        tags = {""},
+        section = "Classic",
+        backgroundcolor3 = "255, 0, 179"
+    },
+    ["Eternal III"] = {
+        Image = "rbxassetid://3281170430&bust=9417",
+        rarity = "Godly",
+        tags = {""},
+        section = "Current",
+        backgroundcolor3 = "255, 0, 179"
+    },
+    ["Eggblade"] = {
+        Image = "http://www.roblox.com/asset/?id=6607512359&bust=5",
+        rarity = "Godly",
+        tags = {""},
+        section = "Current",
+        backgroundcolor3 = "255, 0, 179"
+    },
+    ["Flowerwood"] = {
+        Image = "http://www.roblox.com/Thumbs/Asset.ashx?format=png&width=250&height=250&assetId=16963860501&bust=9739",
+        rarity = "Godly",
+        tags = {""},
+        section = "Current",
+        backgroundcolor3 = "255, 0, 179"
+    },
+    ["Blue Seer"] = {
+        Image = "rbxassetid://3184139996&bust=1574",
+        rarity = "Godly",
+        tags = {""},
+        section = "Classic",
+        backgroundcolor3 = "255, 0, 179"
+    },
+    ["Flames"] = {
+        Image = "http://www.roblox.com/Thumbs/Asset.ashx?format=png&width=250&height=250&assetId=585873746&bust=1391",
+        rarity = "Godly",
+        tags = {""},
+        section = "Classic",
+        backgroundcolor3 = "255, 0, 179"
+    },
+    ["Tides"] = {
+        Image = "rbxassetid://3187398809&bust=4892",
+        rarity = "Godly",
+        tags = {""},
+        section = "Classic",
+        backgroundcolor3 = "255, 0, 179"
+    },
+    ["Ornament"] = {
+        Image = "rbxthumb://type=Asset&w=150&h=150&id=111092946728824&bust=6610",
+        rarity = "Godly",
+        tags = {""},
+        section = "Christmas",
+        backgroundcolor3 = "255, 0, 179"
+    },
+    ["Cookiecane_T"] = {
+        Image = "rbxassetid://11979596437&bust=5831",
+        rarity = "Godly",
+        tags = {"Chroma"},
+        section = "Christmas",
+        backgroundcolor3 = "255, 0, 179"
+    },
+    ["Bloom"] = {
+        Image = "rbxassetid://132419834610569&bust=5527",
+        rarity = "Godly",
+        tags = {""},
+        section = "Current",
+        backgroundcolor3 = "255, 0, 179"
+    },
+    ["Slasher"] = {
+        Image = "rbxassetid://3187398274&bust=6383",
+        rarity = "Godly",
+        tags = {""},
+        section = "Classic",
+        backgroundcolor3 = "255, 0, 179"
+    },
+    ["Eternalcane"] = {
+        Image = "http://www.roblox.com/Thumbs/Asset.ashx?format=png&width=250&height=250&assetId=4488391411&bust=2436",
+        rarity = "Godly",
+        tags = {""},
+        section = "Christmas",
+        backgroundcolor3 = "255, 0, 179"
+    },
+    ["Hallow's Blade"] = {
+        Image = "http://www.roblox.com/Thumbs/Asset.ashx?format=png&width=250&height=250&assetId=1132775323&bust=2153",
+        rarity = "Godly",
+        tags = {""},
+        section = "Halloween",
+        backgroundcolor3 = "255, 0, 179"
+    },
+    ["Snowstorm"] = {
+        Image = "rbxthumb://type=Asset&w=150&h=150&id=70973050894155&bust=4846",
+        rarity = "Godly",
+        tags = {""},
+        section = "Christmas",
+        backgroundcolor3 = "255, 0, 179"
+    },
+    ["Snowflake"] = {
+        Image = "http://www.roblox.com/Thumbs/Asset.ashx?format=png&width=250&height=250&assetId=1268932977&bust=2224",
+        rarity = "Godly",
+        tags = {""},
+        section = "Christmas",
+        backgroundcolor3 = "255, 0, 179"
+    },
+    ["Sweet"] = {
+        Image = "rbxthumb://type=Asset&w=150&h=150&id=126937716954396&bust=9352",
+        rarity = "Godly",
+        tags = {""},
+        section = "Current",
+        backgroundcolor3 = "255, 0, 179"
+    },
+    ["Cookieblade"] = {
+        Image = "http://www.roblox.com/Thumbs/Asset.ashx?format=png&width=250&height=250&assetId=6121574620&bust=8101",
+        rarity = "Godly",
+        tags = {""},
+        section = "Christmas",
+        backgroundcolor3 = "255, 0, 179"
+    },
+    ["Yellow Seer"] = {
+        Image = "rbxassetid://3184139648&bust=190",
+        rarity = "Godly",
+        tags = {""},
+        section = "Classic",
+        backgroundcolor3 = "255, 0, 179"
+    },
+    ["Bat"] = {
+        Image = "http://www.roblox.com/Thumbs/Asset.ashx?format=png&width=250&height=250&assetId=11229814357&bust=7606",
+        rarity = "Godly",
+        tags = {""},
+        section = "Halloween",
+        backgroundcolor3 = "255, 0, 179"
+    },
+    ["Frostsaber"] = {
+        Image = "http://www.roblox.com/Thumbs/Asset.ashx?format=png&width=250&height=250&assetId=1268934541&bust=7384",
+        rarity = "Godly",
+        tags = {""},
+        section = "Christmas",
+        backgroundcolor3 = "255, 0, 179"
+    },
+    ["Plasmablade"] = {
+        Image = "http://www.roblox.com/Thumbs/Asset.ashx?format=png&width=250&height=250&assetId=10014680882&bust=861",
+        rarity = "Godly",
+        tags = {""},
+        section = "Current",
+        backgroundcolor3 = "255, 0, 179"
+    },
+    ["Candleflame_T"] = {
+        Image = "http://www.roblox.com/asset/?id=7806149582&bust=9793",
+        rarity = "Godly",
+        tags = {"Chroma"},
+        section = "Halloween",
+        backgroundcolor3 = "255, 0, 179"
+    },
+    ["BattleAxe"] = {
+        Image = "http://www.roblox.com/Thumbs/Asset.ashx?format=png&width=250&height=250&assetId=1133237368&bust=4138",
+        rarity = "Godly",
+        tags = {""},
+        section = "Halloween",
+        backgroundcolor3 = "255, 0, 179"
+    },
+    ["Purple Seer"] = {
+        Image = "rbxassetid://3184140119&bust=7948",
+        rarity = "Godly",
+        tags = {""},
+        section = "Classic",
+        backgroundcolor3 = "255, 0, 179"
+    },
+    ["Elderwood Blade"] = {
+        Image = "http://www.roblox.com/Thumbs/Asset.ashx?format=png&width=250&height=250&assetId=11254879631&bust=9692",
+        rarity = "Godly",
+        tags = {""},
+        section = "Halloween",
+        backgroundcolor3 = "255, 0, 179"
+    },
+    ["Spider"] = {
+        Image = "http://www.roblox.com/Thumbs/Asset.ashx?format=png&width=250&height=250&assetId=315120760&bust=823",
+        rarity = "Godly",
+        tags = {""},
+        section = "Halloween",
+        backgroundcolor3 = "255, 0, 179"
+    },
+    ["Red Seer"] = {
+        Image = "rbxassetid://3184139367&bust=5778",
+        rarity = "Godly",
+        tags = {""},
+        section = "Classic",
+        backgroundcolor3 = "255, 0, 179"
+    },
+    ["Rainbow"] = {
+        Image = "http://www.roblox.com/Thumbs/Asset.ashx?format=png&width=250&height=250&assetId=12966184630&bust=377",
+        rarity = "Godly",
+        tags = {""},
+        section = "Current",
+        backgroundcolor3 = "255, 0, 179"
+    },
+    ["Candy"] = {
+        Image = "http://www.roblox.com/Thumbs/Asset.ashx?format=png&width=250&height=250&assetId=332021011&bust=2824",
+        rarity = "Godly",
+        tags = {""},
+        section = "Christmas",
+        backgroundcolor3 = "255, 0, 179"
+    },
+    ["Heartblade"] = {
+        Image = "http://www.roblox.com/asset/?id=6413214382&bust=3461",
+        rarity = "Godly",
+        tags = {""},
+        section = "Current",
+        backgroundcolor3 = "255, 0, 179"
+    },
+    ["Hallow's Edge"] = {
+        Image = "http://www.roblox.com/Thumbs/Asset.ashx?format=png&width=250&height=250&assetId=531878205&bust=162",
+        rarity = "Godly",
+        tags = {""},
+        section = "Halloween",
+        backgroundcolor3 = "255, 0, 179"
+    },
+    ["Swirly Blade"] = {
+        Image = "http://www.roblox.com/Thumbs/Asset.ashx?format=png&width=250&height=250&assetId=8304805693&bust=4320",
+        rarity = "Godly",
+        tags = {""},
+        section = "Christmas",
+        backgroundcolor3 = "255, 0, 179"
+    },
+    ["Alienbeam"] = {
+        Image = "rbxthumb://type=Asset&w=150&h=150&id=77607127867154&bust=9250",
+        rarity = "Godly",
+        tags = {""},
+        section = "Halloween",
+        backgroundcolor3 = "255, 0, 179"
+    },
+    ["Gemstone"] = {
+        Image = "rbxassetid://3183657748&bust=2267",
+        rarity = "Godly",
+        tags = {""},
+        section = "Current",
+        backgroundcolor3 = "255, 0, 179"
+    },
+    ["Phantom"] = {
+        Image = "http://www.roblox.com/Thumbs/Asset.ashx?format=png&width=250&height=250&assetId=11229732037&bust=3324",
+        rarity = "Godly",
+        tags = {""},
+        section = "Halloween",
+        backgroundcolor3 = "255, 0, 179"
+    },
+    ["Peppermint"] = {
+        Image = "http://www.roblox.com/Thumbs/Asset.ashx?format=png&width=250&height=250&assetId=6076067750&bust=7360",
+        rarity = "Godly",
+        tags = {""},
+        section = "Christmas",
+        backgroundcolor3 = "255, 0, 179"
+    },
+    ["Ice Shard"] = {
+        Image = "http://www.roblox.com/Thumbs/Asset.ashx?format=png&width=250&height=250&assetId=1268710824&bust=2903",
+        rarity = "Godly",
+        tags = {""},
+        section = "Christmas",
+        backgroundcolor3 = "255, 0, 179"
+    },
+    ["Pixel"] = {
+        Image = "http://www.roblox.com/Thumbs/Asset.ashx?format=png&width=250&height=250&assetId=365347166&bust=7239",
+        rarity = "Godly",
+        tags = {""},
+        section = "Classic",
+        backgroundcolor3 = "255, 0, 179"
+    },
+    ["Pumpking"] = {
+        Image = "http://www.roblox.com/Thumbs/Asset.ashx?format=png&width=250&height=250&assetId=1133082421&bust=2647",
+        rarity = "Godly",
+        tags = {""},
+        section = "Halloween",
+        backgroundcolor3 = "255, 0, 179"
+    },
+}
