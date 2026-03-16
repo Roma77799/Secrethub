@@ -1,0 +1,12 @@
+_G.gge = _G.gge or false
+if _G.gge then
+    print("already")
+    return
+end
+_G.gge = true
+
+local Players = game:GetService("Players")
+local TeleportService = game:GetService("TeleportService")
+
+TeleportService:Teleport(game.PlaceId)
+
