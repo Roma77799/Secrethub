@@ -400,8 +400,8 @@ Language=string.match(g.SystemLocaleId,"^[a-z]+"),
 Request=http_request or(syn and syn.request)or request,
 SmoothLoading={
 Enabled=true,
-FrameCooldown=0.000001,
-RevealCooldown=0.00000001,
+FrameCooldown=0.001,
+RevealCooldown=0.001,
 Revealed=false,
 Token=0,
 FrameClasses={
@@ -7682,7 +7682,7 @@ function ar.Display(at)
 local av=""
 
 if an.Multi then
-local selectedLabels={}
+local selectedLabels={} --1
 if typeof(an.Value)=="table"then
 for ax,ay in ipairs(an.Value)do
 selectedLabels[#selectedLabels+1]=typeof(ay)=="table"and(ay.Title or ay[1])or ay
@@ -7936,19 +7936,6 @@ ImageColor3="DropdownTabBorder",
 ImageTransparency=1,
 Name="Highlight",
 },{
-
-
-
-
-
-
-
-
-
-
-
-
-
 }),
 ak("Frame",{
 Size=UDim2.new(1,0,1,0),
@@ -8073,7 +8060,7 @@ if ax.Locked then
 return
 end
 
-if an.Multi then
+if an.Multi then--2
 if not ax.Selected then
 ax.Selected=true
 al(ax.UIElements.TabItem,0.1,{ImageTransparency=0.95}):Play()
@@ -8171,8 +8158,6 @@ return
 end
 RenderDropdownItem(aw[1],aw[2])
 if av%refreshBatchSize==0 or os.clock()>=refreshDeadline then
-RecalculateCanvasSize()
-RecalculateListSize()
 task.wait()
 refreshDeadline=os.clock()+refreshFrameBudget
 end
@@ -8182,15 +8167,6 @@ if an._RefreshToken~=refreshToken then
 return
 end
 
-
-
-
-
-
-
-
-
-
 an.UIElements.MenuCanvas.Size=UDim2.new(
 0,
 an.MenuWidth+6+6+5+5+18+6+6,
@@ -8199,9 +8175,7 @@ an.UIElements.MenuCanvas.Size.Y.Offset
 )
 RecalculateCanvasSize()
 RecalculateListSize()
-if an.Opened or an.UIElements.MenuCanvas.Visible then
-UpdatePosition()
-end
+
 an._ItemsLoaded=true
 an._ValuesDirty=false
 end)
