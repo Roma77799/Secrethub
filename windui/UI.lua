@@ -531,16 +531,8 @@ end
 
 local u,v=pcall(r,...)
 if not u then
-if m and m.Window and m.Window.Debug then local
-x, z=v:find":%d+: "
-
+if m and m.Window and m.Window.Debug then
 warn("[ WindUI: DEBUG Mode ] "..v)
-
-return m:Notify{
-Title="DEBUG Mode: Error",
-Content=not z and v or v:sub(z+1),
-Duration=8,
-}
 end
 end
 end
@@ -3142,11 +3134,6 @@ ad(v,0.08,{ImageTransparency=1}):Play()
 end)
 ab.AddSignal(v.MouseButton1Click,function()
 r.Copy()
-ag.WindUI:Notify{
-Title="Key System",
-Content="Key link copied to clipboard.",
-Image="key",
-}
 end)
 end
 end
@@ -3197,12 +3184,6 @@ al:Close()()
 task.wait(0.4)
 ai(true)
 end
-else
-ag.WindUI:Notify{
-Title="Key System. Error",
-Content="Invalid key.",
-Icon="triangle-alert",
-}
 end
 elseif not ag.KeySystem.API then
 local b=type(ag.KeySystem.Key)=="table"and table.find(ag.KeySystem.Key,aA)
@@ -3230,12 +3211,6 @@ end
 
 if b then
 handleSuccess(aA)
-else
-ag.WindUI:Notify{
-Title="Key System. Error",
-Content=d,
-Icon="triangle-alert",
-}
 end
 end
 end,"Primary",ax)
@@ -8957,20 +8932,11 @@ local am=not al.Locked
 
 local an=af.New(al.Code,al.Title,ak.Parent,function()
 if am then
-local an=al.Title or"code"
-local ao,ap=pcall(function()
+pcall(function()
 toclipboard(al.Code)
 
 if al.OnCopy then al.OnCopy()end
 end)
-if not ao then
-ak.WindUI:Notify{
-Title="Error",
-Content="The "..an.." is not copied. Error: "..ap,
-Icon="x",
-Duration=5,
-}
-end
 end
 end,ak.WindUI.UIScale,al)
 
