@@ -378,7 +378,12 @@ if d:IsStudio()or not writefile then
 l=a.load'a'
 else
 l=loadstring(
-game.HttpGetAsync and game:HttpGetAsync(j)or h:GetAsync(j)
+(function(u)
+    if type(request)=="function" then local r=request({Url=u,Method="GET"}) return r and r.Body
+    elseif type(syn)=="table" and type(syn.request)=="function" then local r=syn.request({Url=u,Method="GET"}) return r and r.Body
+    elseif game.HttpGetAsync then return game:HttpGetAsync(u)
+    else return h:GetAsync(u) end
+end)(j)
 )()
 end
 
@@ -2115,8 +2120,12 @@ function aa.New(ab,ac)
 local ad="https://sdkapi-public.luarmor.net/library.lua"
 
 local ae=loadstring(
-game.HttpGetAsync and game:HttpGetAsync(ad)
-or HttpService:GetAsync(ad)
+(function(u)
+    if type(request)=="function" then local r=request({Url=u,Method="GET"}) return r and r.Body
+    elseif type(syn)=="table" and type(syn.request)=="function" then local r=syn.request({Url=u,Method="GET"}) return r and r.Body
+    elseif game.HttpGetAsync then return game:HttpGetAsync(u)
+    else return HttpService:GetAsync(u) end
+end)(ad)
 )()
 local af=setclipboard or toclipboard
 
