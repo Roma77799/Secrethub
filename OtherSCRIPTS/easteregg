@@ -1,0 +1,139 @@
+local TweenService = game:GetService("TweenService")
+local Players = game:GetService("Players")
+local RunService = game:GetService("RunService")
+local player = Players.LocalPlayer
+local gui = player:WaitForChild("PlayerGui")
+
+-- Удаляем старый GUI
+local old = gui:FindFirstChild("FlyingCatGui")
+if old then old:Destroy() end
+
+-- Создаём GUI
+local screenGui = Instance.new("ScreenGui", gui)
+screenGui.Name = "FlyingCatGui"
+screenGui.ResetOnSpawn = false
+
+-- Создаём кота
+local wrapper = Instance.new("ImageLabel", screenGui)
+wrapper.Name = "Cat"
+wrapper.Size = UDim2.new(0.2,0,0.2,0)
+wrapper.AnchorPoint = Vector2.new(0.5,0.5)
+wrapper.BackgroundTransparency = 1
+wrapper.Image = "rbxassetid://18685588755"
+
+-- Сохраняем пропорции кота
+local aspect = Instance.new("UIAspectRatioConstraint", wrapper)
+aspect.AspectRatio = 1
+aspect.AspectType = Enum.AspectType.ScaleWithParentSize
+aspect.DominantAxis = Enum.DominantAxis.Height
+
+-- Ждём, пока размеры будут доступны
+RunService.RenderStepped:Wait()
+local center = UDim2.new(0.5,0,0.5,0)
+
+-- Случайный угол появления
+local c = math.random(1,4)
+local startPos = (c==1 and UDim2.new(0,0,0,0))
+               or (c==2 and UDim2.new(1,0,0,0))
+               or (c==3 and UDim2.new(0,0,1,0))
+               or UDim2.new(1,0,1,0)
+wrapper.Position = startPos
+
+-- Флаг для блокировки клика
+local clicked = false
+local tweenFinished = false
+
+local tween = TweenService:Create(wrapper, TweenInfo.new(0.8, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {Position=center})
+tween:Play()
+
+tween.Completed:Connect(function()
+    tweenFinished = true
+end)
+
+local connection -- переменная для хранения коннекта
+
+local function onClick()
+    if clicked or not tweenFinished then return end -- блокируем, если уже нажато или Tween не завершился
+    clicked = true
+
+    -- Ждём точные размеры кота
+    RunService.RenderStepped:Wait()
+    local catBottom = wrapper.AbsolutePosition.Y + wrapper.AbsoluteSize.Y
+    local catCenterX = wrapper.AbsolutePosition.X + wrapper.AbsoluteSize.X/2
+
+    -- Создаём белый фон под текст
+    local bubbleFrame = Instance.new("Frame", screenGui)
+    bubbleFrame.BackgroundColor3 = Color3.fromRGB(255,255,255)
+    bubbleFrame.AnchorPoint = Vector2.new(0.5,0)
+    bubbleFrame.Size = UDim2.new(0, wrapper.AbsoluteSize.X * 2, 0, wrapper.AbsoluteSize.Y * 0.2)
+    bubbleFrame.Position = UDim2.new(0, catCenterX, 0, catBottom)
+
+    -- Создаём текст
+    local bubble = Instance.new("TextLabel", bubbleFrame)
+    bubble.BackgroundTransparency = 1
+    bubble.Size = UDim2.new(1,0,1,0)
+    bubble.TextColor3 = Color3.fromRGB(0,0,0)
+    bubble.Font = Enum.Font.Arcade
+    bubble.TextScaled = true
+    bubble.TextWrapped = true
+    bubble.Text = ""
+    bubble.AnchorPoint = Vector2.new(0.5,0)
+    bubble.Position = UDim2.new(0.5,0,0,0)
+
+    -- Sans Talk звук
+    local sansSound = Instance.new("Sound", bubble)
+    sansSound.SoundId = "rbxassetid://5417004822"
+    sansSound.Looped = true
+    sansSound.PlaybackSpeed = 1.5
+    sansSound:Play()
+
+    -- Печатная машинка
+    local fullText = "Why did you push me?"
+    spawn(function()
+        for i=1,#fullText do
+            bubble.Text = string.sub(fullText,1,i)
+            wait(0.05)
+        end
+        sansSound:Stop()
+        wait(1)
+
+        -- Взрыв
+        local boom = Instance.new("Sound", screenGui)
+        boom.SoundId = "rbxassetid://71379251021209"
+        boom.PlaybackSpeed = 1.1
+        boom:Play()
+
+        -- Удаляем кота и текст
+        wrapper:Destroy()
+        bubbleFrame:Destroy()
+
+        -- Картинка взрыва на месте кота
+        local explosion = Instance.new("ImageLabel", screenGui)
+        explosion.Size = UDim2.new(0.2,0,0.2,0)
+        explosion.AnchorPoint = Vector2.new(0.5,0.5)
+        explosion.Position = center
+        explosion.BackgroundTransparency = 1
+        explosion.Image = "rbxassetid://12796878950"
+
+        delay(1,function()
+            explosion:Destroy()
+            screenGui:Destroy()
+        end)
+    end)
+end
+
+-- Поддержка мыши и сенсорного экрана
+connection = wrapper.InputBegan:Connect(function(input)
+    if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
+        onClick()
+    end
+end)
+
+-- Удаляем коннект при удалении кота
+wrapper.AncestryChanged:Connect(function(_, parent)
+    if not parent then
+        if connection then
+            connection:Disconnect()
+        end
+    end
+end)
