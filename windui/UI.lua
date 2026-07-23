@@ -28968,7 +28968,7 @@ ad.Tween
 
 function aa.New(ag,ah,ai,aj)
 local ak=ae("Frame",{
-Size=UDim2.new(0,aj,1,0),
+Size=UDim2.new(0,aj,0,0),
 BackgroundTransparency=1,
 Position=UDim2.new(1,0,0,0),
 AnchorPoint=Vector2.new(1,0),
@@ -28979,7 +28979,7 @@ Active=true,
 
 local al=ad.NewRoundFrame(aj/2,"Squircle",{
 Size=UDim2.new(1,0,0,0),
-ImageTransparency=0.85,
+ImageTransparency=0.7,
 ThemeTag={ImageColor3="Text"},
 Parent=ak,
 })
@@ -28996,6 +28996,29 @@ Parent=al,
 
 local an=false
 local ao=0
+
+-- Keep bar glued to the scrolling frame (not full parent height) so it cannot
+-- create empty holes in UIListLayout sidebars / search headers.
+local function syncBarGeometry()
+pcall(function()
+if not ag or not ag.Parent or not ah or not ah.Parent then
+return
+end
+local relY=ag.AbsolutePosition.Y-ah.AbsolutePosition.Y
+local h=ag.AbsoluteSize.Y
+if h<1 then
+return
+end
+ak.AnchorPoint=Vector2.new(1,0)
+ak.Position=UDim2.new(1,0,0,math.max(relY,0))
+ak.Size=UDim2.fromOffset(aj,h)
+end)
+end
+syncBarGeometry()
+ad.AddSignal(ag:GetPropertyChangedSignal"AbsoluteSize",syncBarGeometry)
+ad.AddSignal(ag:GetPropertyChangedSignal"AbsolutePosition",syncBarGeometry)
+ad.AddSignal(ah:GetPropertyChangedSignal"AbsoluteSize",syncBarGeometry)
+ad.AddSignal(ah:GetPropertyChangedSignal"AbsolutePosition",syncBarGeometry)
 
 local function updateSliderSize()
 local ap=ag
@@ -32607,6 +32630,39 @@ au=at
 end
 au=au or an.Values or{}
 an.Values=au
+-- Keep current selection across refresh; only drop entries missing from new Values.
+do
+local function nameOf(ax)
+if typeof(ax)=="table"then
+return ax.Title or ax[1] or ax.Name
+end
+return ax
+end
+local validNames={}
+for _,ax in next,au do
+local ay=nameOf(ax)
+if ay~=nil then
+validNames[ay]=true
+end
+end
+if an.Multi then
+if typeof(an.Value)=="table"then
+local kept={}
+for _,ax in ipairs(an.Value)do
+local ay=nameOf(ax)
+if ay~=nil and validNames[ay]then
+kept[#kept+1]=ax
+end
+end
+an.Value=kept
+end
+elseif an.Value~=nil then
+local ay=nameOf(an.Value)
+if ay==nil or not validNames[ay]then
+an.Value=nil
+end
+end
+end
 do
 local d=getgenv().WindUIDebug
 if d and d.OnDropdownRefresh then
@@ -35778,7 +35834,8 @@ TextTransparency=not ap.Locked and 0.4 or 0.7,
 TextSize=15,
 Size=UDim2.new(1,0,0,0),
 FontFace=Font.new(ah.Font,Enum.FontWeight.Medium),
-TextWrapped=true,
+TextWrapped=false,
+TextTruncate=Enum.TextTruncate.AtEnd,
 RichText=true,
 AutomaticSize="Y",
 LayoutOrder=2,
@@ -35883,6 +35940,29 @@ ar=-30
 
 
 
+end
+
+ap._TabTitleBaseOffset=ar
+
+do
+local lockBadge=ah.Image("lock","lock:"..ap.Title,0,Window.Folder,"TabLock",true,nil,"Icon")
+lockBadge.Size=UDim2.new(0,14,0,14)
+lockBadge.LayoutOrder=3
+lockBadge.Visible=ap.Locked==true
+lockBadge.Parent=ap.UIElements.Main.Frame
+pcall(function()
+local img=lockBadge:FindFirstChild("ImageLabel",true)
+if img then
+img.ImageTransparency=0.4
+end
+end)
+ap.UIElements.LockIcon=lockBadge
+if ap.Locked==true then
+local titleLabel=ap.UIElements.Main.Frame:FindFirstChild("TextLabel")
+if titleLabel then
+titleLabel.Size=UDim2.new(1,(ap._TabTitleBaseOffset or 0)-16-(2+(Window.UIPadding/2)),0,0)
+end
+end
 end
 
 ap.UIElements.ContainerFrame=aj("ScrollingFrame",{
@@ -36129,6 +36209,62 @@ end
 end
 
 return aA
+end
+
+function ap.SetLocked(az,locked)
+ap.Locked=locked==true
+local titleLabel=ap.UIElements.Main and ap.UIElements.Main.Frame and ap.UIElements.Main.Frame:FindFirstChild("TextLabel")
+local lockExtra=ap.Locked and(-16-(2+(Window.UIPadding/2)))or 0
+if titleLabel then
+titleLabel.Size=UDim2.new(1,(ap._TabTitleBaseOffset or 0)+lockExtra,0,0)
+end
+if ap.UIElements.LockIcon then
+ap.UIElements.LockIcon.Visible=ap.Locked
+end
+if ap.Locked then
+if titleLabel then
+titleLabel.TextTransparency=0.7
+end
+if ap.UIElements.Icon and ap.UIElements.Icon.ImageLabel and not ap.IconColor then
+ap.UIElements.Icon.ImageLabel.ImageTransparency=0.7
+end
+ah.SetThemeTag(ap.UIElements.Main.Frame,{
+ImageTransparency="TabBorderTransparency",
+},0.1)
+else
+if ap.Selected then
+if titleLabel then
+ah.SetThemeTag(titleLabel,{
+TextTransparency="TabTextTransparencyActive",
+},0.1)
+end
+if ap.UIElements.Icon and ap.UIElements.Icon.ImageLabel and not ap.IconColor then
+ah.SetThemeTag(ap.UIElements.Icon.ImageLabel,{
+ImageTransparency="TabIconTransparencyActive",
+},0.1)
+end
+else
+if titleLabel then
+ah.SetThemeTag(titleLabel,{
+TextTransparency="TabTextTransparency",
+},0.1)
+end
+if ap.UIElements.Icon and ap.UIElements.Icon.ImageLabel and not ap.IconColor then
+ah.SetThemeTag(ap.UIElements.Icon.ImageLabel,{
+ImageTransparency="TabIconTransparency",
+},0.1)
+end
+end
+end
+return ap
+end
+
+function ap.LockTab(az)
+return ap:SetLocked(true)
+end
+
+function ap.UnlockTab(az)
+return ap:SetLocked(false)
 end
 
 function ap.Select(az)
@@ -37012,9 +37148,20 @@ ar.Frame.Results.Frame.Visible=false
 end
 end
 
+do
+local searchToken=0
 af.AddSignal(ao:GetPropertyChangedSignal"Text",function()
-an:Search(ao.Text)
+searchToken+=1
+local token=searchToken
+local text=ao.Text
+task.delay(0.22,function()
+if token~=searchToken then
+return
+end
+an:Search(text)
 end)
+end)
+end
 
 return an
 end
@@ -37290,7 +37437,8 @@ au.UIElements.SideBar,
 })
 
 if au.ScrollBarEnabled then
-aq(au.UIElements.SideBar,au.UIElements.SideBarContainer.Content,au,3)
+-- Parent to SideBarContainer (overlay), NOT Content/list — avoids empty gap in tab list.
+aq(au.UIElements.SideBar,au.UIElements.SideBarContainer,au,8)
 end
 
 au.UIElements.MainBar=am("Frame",{
