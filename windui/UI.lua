@@ -25206,13 +25206,24 @@ if r then
 p.Language=r
 end
 
-for u=1,#p.LocalizationObjects do
-local v=p.LocalizationObjects[u]
-if v.Object and v.Object.Parent~=nil then
-p.SetLangForObject(u)
-else
-p.LocalizationObjects[u]=nil
+-- Compact first: nilling holes mid-array breaks `#` / ipairs on later SetLanguage calls
+-- (sidebar tabs stay updated; later Settings/Autofarm labels freeze on old language).
+local maxIdx=0
+for u in pairs(p.LocalizationObjects)do
+if type(u)=="number"and u>maxIdx then
+maxIdx=u
 end
+end
+local cleaned={}
+for u=1,maxIdx do
+local v=p.LocalizationObjects[u]
+if v and v.Object and v.Object.Parent~=nil then
+cleaned[#cleaned+1]=v
+end
+end
+p.LocalizationObjects=cleaned
+for u=1,#cleaned do
+p.SetLangForObject(u)
 end
 end
 
@@ -25464,10 +25475,11 @@ end
 if p.Localization and p.Localization.Enabled and A=="Text"then
 local C=string.match(B,"^"..p.Localization.Prefix.."(.+)")
 if C then
-local F=#p.LocalizationObjects+1
-p.LocalizationObjects[F]={TranslationId=C,Object=x}
-
-p.SetLangForObject(F)
+table.insert(p.LocalizationObjects,{
+TranslationId=C,
+Object=x,
+})
+p.SetLangForObject(#p.LocalizationObjects)
 end
 end
 end
