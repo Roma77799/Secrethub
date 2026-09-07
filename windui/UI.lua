@@ -24891,7 +24891,7 @@ end
 end
 
 function p.SafeCallback(r,...)
-if not r then
+if type(r)~="function"then
 return
 end
 
@@ -28531,18 +28531,18 @@ Checkbox=Color3.fromHex"#0091FF",
 
 TabBackground=Color3.fromHex"#ffffff",
 TabBackgroundHover=Color3.fromHex"#ffffff",
-TabBackgroundHoverTransparency=0.5,
+TabBackgroundHoverTransparency=0.7,
 TabBackgroundActive=Color3.fromHex"#ffffff",
-TabBackgroundActiveTransparency=0,
+TabBackgroundActiveTransparency=0.88,
 
 PanelBackground=Color3.fromHex"#FFFFFF",
-PanelBackgroundTransparency=0,
+PanelBackgroundTransparency=0.88,
 
 LabelBackground=Color3.fromHex"#ffffff",
-LabelBackgroundTransparency=0,
+LabelBackgroundTransparency=0.8,
 
 ElementBackground=Color3.fromHex"#EEEEEE",
-ElementBackgroundTransparency=0,
+ElementBackgroundTransparency=0.72,
 },
 
 Rose={
@@ -31318,7 +31318,7 @@ end
 ax=ax~=false
 
 task.spawn(function()
-if aj and ax then
+if type(aj)=="function"and ax then
 ab.SafeCallback(aj,aw)
 end
 end)
@@ -32493,11 +32493,11 @@ end
 
 local function Callback(at)
 ar:Display()
-if an.Callback then
+if type(an.Callback)=="function"then
 task.spawn(function()
 aj.SafeCallback(an.Callback,an.Value)
 end)
-else
+elseif type(at)=="function"then
 task.spawn(function()
 aj.SafeCallback(at)
 end)
@@ -38199,6 +38199,9 @@ local u=al.Drag(
 au.UIElements.Main,
 {au.UIElements.Main.Main.Topbar,l.Frame},
 function(u,v)
+if au.Locked then
+return
+end
 if not au.Closed then
 if u and v==l.Frame then
 an(l,0.1,{ImageTransparency=0.35}):Play()
@@ -38210,6 +38213,10 @@ au.Dragging=u
 end
 end
 )
+au._WindowDrag=u
+if au.Locked and u and u.Set then
+u:Set(false)
+end
 
 if not f and au.Background and typeof(au.Background)=="table"then
 local v=am"UIGradient"
@@ -38884,6 +38891,11 @@ else
 opts={Title="Loading...",Progress=true}
 end
 au.Locked=true
+if au._WindowDrag and au._WindowDrag.Set then
+pcall(function()
+au._WindowDrag:Set(false)
+end)
+end
 if not au._LoadStartClock then
 au._LoadStartClock=os.clock()
 end
@@ -38912,6 +38924,11 @@ end
 
 function au.Unlock(z)
 au.Locked=false
+if au._WindowDrag and au._WindowDrag.Set then
+pcall(function()
+au._WindowDrag:Set(true)
+end)
+end
 if au._LoadStartClock then
 au._LoadElapsed=os.clock()-au._LoadStartClock
 end
